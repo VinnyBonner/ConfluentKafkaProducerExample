@@ -18,11 +18,11 @@ Create a free [Confluent Cloud Account](https://www.confluent.io/)
 
 
 ## Set Up
-
+<ToDo>
 
 
 ### Create C# Config
 1. Click on Data Integration side menu item
 2. Select C#
 3. Click "Create Kafka cluster API Key"
-4. Click "Copy" and save
+4. Click "Copy" and Paste into the confluent.config file which is part of the project.

@@ -24,7 +24,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace CCloud
+namespace ProducerExample
 {
     class Program
     {

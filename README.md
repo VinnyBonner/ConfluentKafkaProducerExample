@@ -1,4 +1,5 @@
 # Confluent Kafka Producer Example
+#### This Example code goes along with my [Azure Kafka Trigger Function Examples](https://github.com/VinnyBonner/AzureKafkaTriggerFunctionExamples)
 
 ## Prerequisites
 Create a free [Confluent Cloud Account](https://www.confluent.io/)

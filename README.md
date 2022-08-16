@@ -19,10 +19,10 @@ Create a free [Confluent Cloud Account](https://www.confluent.io/)
 4. Click Show advanced settings to configure storage cleanup and retention settings, and max message size.
 5. Click Save & create
 
-
-## Set Up C# Producer
-<ToDo>
-
+## C# Producer
+### Set Up C# Producer  
+1. [Download the project files](https://github.com/VinnyBonner/ConfluentKafkaProducerExample/tree/main/CSharpExample)
+2. Open the .csproj in [Visual Studios](https://visualstudio.microsoft.com/)
 
 ### Create C# Config
 1. Click on Data Integration side menu item

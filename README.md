@@ -4,6 +4,8 @@
 ## Prerequisites
 Create a free [Confluent Cloud Account](https://www.confluent.io/)
 
+
+
 ### Create Kafka Cluster Steps:
 1. Create a Kafka Cluster (Free Tier Available)
 2. Select Cloud Provider and region (Recommend Azure with closest region and single zone availability)
@@ -18,7 +20,7 @@ Create a free [Confluent Cloud Account](https://www.confluent.io/)
 5. Click Save & create
 
 
-## Set Up
+## Set Up C# Producer
 <ToDo>
 
 
@@ -27,3 +29,8 @@ Create a free [Confluent Cloud Account](https://www.confluent.io/)
 2. Select C#
 3. Click "Create Kafka cluster API Key"
 4. Click "Copy" and Paste into the confluent.config file which is part of the project.
+
+
+## Set up Avo Schema and Java Producer
+
+### Create the Avo Schema

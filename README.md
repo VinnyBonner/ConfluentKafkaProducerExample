@@ -19,7 +19,7 @@ Create a free [Confluent Cloud Account](https://www.confluent.io/)
 4. Click Show advanced settings to configure storage cleanup and retention settings, and max message size.
 5. Click Save & create
 
-## C# Producer
+## Set up C# Producer (Standard Message Format)
 ### Get Configuration from the Confluent Portal
 1. Click on Data Integration side menu item
 2. Select C#
@@ -38,6 +38,6 @@ Create a free [Confluent Cloud Account](https://www.confluent.io/)
   - DeleteTopic <TopicName>
   - CreateTopic <TopicName> <NumberOfPartitions>
 
-## Set up Avo Schema and Java Producer
+## Set up Java Producer (Avo Schema Message Format)
 
 ### Create the Avo Schema

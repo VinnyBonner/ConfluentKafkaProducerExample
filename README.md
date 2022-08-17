@@ -33,10 +33,10 @@ Create a free [Confluent Cloud Account](https://www.confluent.io/)
 8. Build the solution
 
 ### Run the project
-8. You can run the project using the command line with the following arguments
-- Produce <TopicName> <NumberOfMessagesToProduce>
-- DeleteTopic <TopicName>
-- CreateTopic <TopicName> <NumberOfPartitions>
+9. You can run the project using the command line with the following arguments
+  - Produce <TopicName> <NumberOfMessagesToProduce>
+  - DeleteTopic <TopicName>
+  - CreateTopic <TopicName> <NumberOfPartitions>
 
 ## Set up Avo Schema and Java Producer
 

@@ -82,19 +82,26 @@ namespace ProducerExample
             }
         }
         
-        static void Produce(string topic, ClientConfig config)
+        static void Produce(string topic, ClientConfig config, string strNumMessages)
         {
+            // setting the partition mode to Random from default consistent_random - https://docs.confluent.io/5.5.0/clients/confluent-kafka-dotnet/api/Confluent.Kafka.ProducerConfig.html#Confluent_Kafka_ProducerConfig_Partitioner
             var producerConfig = new ProducerConfig(config)
             {
                 Partitioner = Partitioner.Random
             };
+
+            if (!int.TryParse(strNumMessages, out int numMessages))
+            {
+                Console.WriteLine($"An error occured parsing number of Messages '{numMessages}'");
+                System.Environment.Exit(1);
+                return;
+            }
 
             try
             {               
                 using (var producer = new ProducerBuilder<string, string>(producerConfig).Build())
                 {
                     int numProduced = 0;
-                    int numMessages = 100;
                     int totalNumMessages = 0;
 
                     for (int i = 0; i < numMessages; ++i)
@@ -176,23 +183,22 @@ namespace ProducerExample
         static async Task Main(string[] args)
         {
             if (args.Length != 2 && args.Length != 3) { PrintUsage(); }
-            
-            var mode = args[0];
-            var topic = args[1];
-            var numPartitions = args.Length == 3 ? args[2] : null;
+
+            string mode = args[0];
+            string topic = args[1];            
 
             var config = await LoadConfig();
 
             switch (mode.ToLower())
             {
                 case "produce":                   
-                    Produce(topic, config);
+                    Produce(topic, config, args.Length == 3 ? args[2] : "100");
                     break;
                 case "deletetopic":
                     DeleteTopic(topic, config);
                     break;
                 case "createtopic":
-                    await CreateTopicMaybe(topic, numPartitions, config);
+                    await CreateTopicMaybe(topic, args.Length == 3 ? args[2] : "6", config);
                     break;
                 default:
                     PrintUsage();

@@ -24,6 +24,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class WalletProducer {
+    // Update the TOPIC Value with the name of your Topic
     private static final String TOPIC = "AvroTopic";
     private static final Properties props = new Properties();
 

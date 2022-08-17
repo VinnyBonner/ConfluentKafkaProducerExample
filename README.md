@@ -20,16 +20,23 @@ Create a free [Confluent Cloud Account](https://www.confluent.io/)
 5. Click Save & create
 
 ## C# Producer
-### Set Up C# Producer  
-1. [Download the project files](https://github.com/VinnyBonner/ConfluentKafkaProducerExample/tree/main/CSharpExample)
-2. Open the .csproj in [Visual Studios](https://visualstudio.microsoft.com/)
-
-### Create C# Config
+### Get Configuration from the Confluent Portal
 1. Click on Data Integration side menu item
 2. Select C#
 3. Click "Create Kafka cluster API Key"
-4. Click "Copy" and Paste into the confluent.config file which is part of the project.
+4. Click "Copy" and Paste into the confluent.config file which is part of the project
 
+### Set Up C# Producer  
+5. [Download the project files](https://github.com/VinnyBonner/ConfluentKafkaProducerExample/tree/main/CSharpExample)
+6. Open the .csproj in [Visual Studios](https://visualstudio.microsoft.com/)
+7. Paste the Confluent config info from step 4 into the confluent.config file and save
+8. Build the solution
+
+### Run the project
+8. You can run the project using the command line with the following arguments
+- Produce <TopicName> <NumberOfMessagesToProduce>
+- DeleteTopic <TopicName>
+- CreateTopic <TopicName> <NumberOfPartitions>
 
 ## Set up Avo Schema and Java Producer
 

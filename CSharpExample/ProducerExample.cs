@@ -176,7 +176,7 @@ namespace ProducerExample
 
         static void PrintUsage()
         {
-            Console.WriteLine("usage: .. produce <TopicName> <NumberOfMessageToSend> |createtopic <NameOfTopic>|deletetopic <TopicName>");
+            Console.WriteLine("usage: .. produce <TopicName> <NumberOfMessageToSend> |createtopic <NameOfTopic> <NumberOfPartitions>|deletetopic <TopicName>");
             System.Environment.Exit(1);
         }
 
